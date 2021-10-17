@@ -7,8 +7,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "publish": "yarn build && npm publish"
+    "test:watch": "jest --watch"
   },
   "author": "MATO Tomoya <tomoya.matou@gmail.com> (https://github.com/t29mato)",
   "license": "MIT",
