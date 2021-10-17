@@ -16,7 +16,6 @@ export const circle2array = (diameter: number): boolean[][] => {
             }
         }
     }
-    console.log(result)
     return result
 }
 
