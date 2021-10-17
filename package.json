@@ -10,6 +10,10 @@
     "test:watch": "jest --watch"
   },
   "author": "MATO Tomoya <tomoya.matou@gmail.com> (https://github.com/t29mato)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t29mato/symbol2array.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@types/node": "^16.11.1",
