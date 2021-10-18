@@ -1,8 +1,14 @@
 type binary = 0 | 1
 
 export const circle2array = (count: number): binary[][] => {
-    if (count < 3) {
-        throw new Error("Circle diameter should be more than 3");
+    if (count < 1) {
+        throw new Error("Circle diameter should be more than 1");
+    }
+    if (count === 1) {
+        return [[1]]
+    }
+    if (count === 2) {
+        return [[ 1, 1], [ 1, 1]]
     }
     const diameter = count - 1
     const radius = diameter / 2
