@@ -1,17 +1,17 @@
-import { circle, circleOutline } from './circle'
+import { circle, circleInline } from './circle'
 
-test('diameter is 0', () => {
+test('Circle size: 0', () => {
   expect(() => {
     circle(0)
-  }).toThrowError('Circle length should be more than 1')
+  }).toThrowError('Circle size should be more than 1')
 })
-test('diameter is 1', () => {
+test('Circle size: 1', () => {
   const asis = circle(1)
   const tobe = [[1]]
   expect(asis).toStrictEqual(tobe)
 })
 
-test('diameter is 2', () => {
+test('Circle size: 2', () => {
   const asis = circle(2)
   const tobe = [
     [1, 1],
@@ -20,7 +20,7 @@ test('diameter is 2', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('diameter is 3', () => {
+test('Circle size: 3', () => {
   const asis = circle(3)
   const tobe = [
     [0, 1, 0],
@@ -30,7 +30,7 @@ test('diameter is 3', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('diameter is 4', () => {
+test('Circle size: 4', () => {
   expect(circle(4)).toStrictEqual([
     [0, 0, 0, 0],
     [0, 1, 1, 0],
@@ -38,7 +38,7 @@ test('diameter is 4', () => {
     [0, 0, 0, 0],
   ])
 })
-test('diameter is 11', () => {
+test('Circle size: 11', () => {
   const asis = circle(11)
   const tobe = [
     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
@@ -56,29 +56,29 @@ test('diameter is 11', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('circle outline: length 0, outline width: 0', () => {
+test('Circle size: 0, inline size: 0', () => {
   expect(() => {
-    circleOutline(0, 0)
-  }).toThrowError('Circle length or outline width should be more than 1')
+    circleInline(0, 0)
+  }).toThrowError('Circle size or inline width should be more than 1')
 })
 
-test('circle outline: length 1, outline width: 0', () => {
+test('Circle size: 1, inline size: 0', () => {
   expect(() => {
-    circleOutline(1, 0)
-  }).toThrowError('Circle length or outline width should be more than 1')
+    circleInline(1, 0)
+  }).toThrowError('Circle size or inline width should be more than 1')
 })
 
-test('circle outline: length 1, outline width: 1', () => {
+test('Circle size: 1, inline size: 1', () => {
   const tobe = [[1]]
-  expect(circleOutline(1, 1)).toStrictEqual(tobe)
+  expect(circleInline(1, 1)).toStrictEqual(tobe)
 })
-test('circle outline: length 1, outline width: 1', () => {
+test('Circle size: 1, inline size: 1', () => {
   const tobe = [[1]]
-  expect(circleOutline(1, 1)).toStrictEqual(tobe)
+  expect(circleInline(1, 1)).toStrictEqual(tobe)
 })
 
-test('circle outline: length 3, outline width: 1', () => {
-  const asis = circleOutline(3, 1)
+test('Circle size: 3, inline size: 1', () => {
+  const asis = circleInline(3, 1)
   const tobe = [
     [0, 1, 0],
     [1, 0, 1],
@@ -87,8 +87,8 @@ test('circle outline: length 3, outline width: 1', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('circle outline: length 4, outline width: 1', () => {
-  const asis = circleOutline(4, 1)
+test('Circle size: 4, inline size: 1', () => {
+  const asis = circleInline(4, 1)
   const tobe = [
     [0, 0, 0, 0],
     [0, 1, 1, 0],
@@ -97,8 +97,8 @@ test('circle outline: length 4, outline width: 1', () => {
   ]
   expect(asis).toStrictEqual(tobe)
 })
-test('circle outline: length 5, outline width: 1', () => {
-  const asis = circleOutline(5, 1)
+test('Circle size: 5, inline size: 1', () => {
+  const asis = circleInline(5, 1)
   const tobe = [
     [0, 0, 1, 0, 0],
     [0, 1, 0, 1, 0],
@@ -109,8 +109,8 @@ test('circle outline: length 5, outline width: 1', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('circle outline: length 5, outline width: 2', () => {
-  const asis = circleOutline(5, 2)
+test('Circle size: 5, inline size: 2', () => {
+  const asis = circleInline(5, 2)
   const tobe = [
     [0, 0, 1, 0, 0],
     [0, 1, 1, 1, 0],
@@ -121,8 +121,8 @@ test('circle outline: length 5, outline width: 2', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('circle outline: length 5, outline width: 3', () => {
-  const asis = circleOutline(5, 3)
+test('Circle size: 5, inline size: 3', () => {
+  const asis = circleInline(5, 3)
   const tobe = [
     [0, 0, 1, 0, 0],
     [0, 1, 1, 1, 0],
@@ -132,8 +132,8 @@ test('circle outline: length 5, outline width: 3', () => {
   ]
   expect(asis).toStrictEqual(tobe)
 })
-test('circle outline: length 5, outline width: 4', () => {
-  const asis = circleOutline(5, 4)
+test('Circle size: 5, inline size: 4', () => {
+  const asis = circleInline(5, 4)
   const tobe = [
     [0, 0, 1, 0, 0],
     [0, 1, 1, 1, 0],
@@ -144,8 +144,8 @@ test('circle outline: length 5, outline width: 4', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('circle outline: length 10, outline width: 2', () => {
-  const asis = circleOutline(10, 2)
+test('Circle size: 10, inline size: 2', () => {
+  const asis = circleInline(10, 2)
   const tobe = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
@@ -161,8 +161,8 @@ test('circle outline: length 10, outline width: 2', () => {
   expect(asis).toStrictEqual(tobe)
 })
 
-test('circle outline: length 11, outline width: 2', () => {
-  const asis = circleOutline(11, 2)
+test('Circle size: 11, inline size: 2', () => {
+  const asis = circleInline(11, 2)
   const tobe = [
     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],

@@ -5,7 +5,7 @@ symbol2array generates a two-dimensional array from circles and other symbols
 ## examples
 
 ```js
-import { circle, circleOutline } from 'symbol2array'
+import { circle, circleInline } from 'symbol2array'
 
 // circle size: 3
 circle(3)
@@ -32,7 +32,7 @@ circle(11)
 // ]
 
 // circle size: 3, circle inline size: 1
-circleOutline(3, 1)
+circleInline(3, 1)
 // [
 //     [0, 1, 0],
 //     [1, 0, 1],
@@ -40,7 +40,7 @@ circleOutline(3, 1)
 // ]
 
 // circle size: 11, circle inline size: 2
-circleOutline(11, 2)
+circleInline(11, 2)
 // [
 //     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
 //     [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
