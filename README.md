@@ -5,18 +5,18 @@ symbol2array generates a two-dimensional array from circles and other symbols
 ## examples
 
 ```
-circle2array(3)
+circle(3)
 [[ 0, 1, 0 ],
  [ 1, 1, 1 ],
  [ 0, 1, 0 ]]
 
-circle2array(4)
+circle(4)
 [[ 0, 0, 0, 0 ],
  [ 0, 1, 1, 0 ],
  [ 0, 1, 1, 0 ],
  [ 0, 0, 0, 0 ]]
 
-circle2array(5)
+circle(5)
 [[ 0, 0, 1, 0, 0 ],
  [ 0, 1, 1, 1, 0 ],
  [ 1, 1, 1, 1, 1 ],

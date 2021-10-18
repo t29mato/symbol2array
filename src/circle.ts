@@ -1,6 +1,6 @@
 type binary = 0 | 1
 
-export const circle2array = (length: number): binary[][] => {
+export const circle = (length: number): binary[][] => {
     if (length < 1) {
         throw new Error("Circle length should be more than 1");
     }
@@ -23,19 +23,19 @@ export const circle2array = (length: number): binary[][] => {
     return result
 }
 
-export const circleOutline2array = (length: number, outlineWdith: number): binary[][] => {
+export const circleOutline = (length: number, outlineWdith: number): binary[][] => {
     if (length < 1 || outlineWdith < 1) {
         throw new Error("Circle length or outline width should be more than 1");
     }
     if (length < 3) {
-        return circle2array(length)
+        return circle(length)
     }
     const outerDiameter = length - 1
     const outerRadius = outerDiameter / 2
     const innerDiameter = outerDiameter - outlineWdith * 2
     const innerRadius = innerDiameter / 2
     if (outerDiameter <= innerDiameter || innerDiameter < 0) {
-        return circle2array(length)
+        return circle(length)
     }
 
     const result = [...Array(length)].map(item => Array(length).fill(0))

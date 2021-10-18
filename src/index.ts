@@ -1,3 +1,3 @@
-import { circle2array } from './circle'
+import { circle } from './circle'
 
-export { circle2array }
+export { circle }
