@@ -1,4 +1,4 @@
-import { circle2array } from './index'
+import { circle2array } from './circle'
 
 test('diameter is 0', () => {
     expect(() => {
@@ -32,17 +32,6 @@ test('diameter is 4', () => {
             [ false, true, true, false ],
             [ false, true, true, false ],
             [ false, false, false, false ]
-        ]
-    )
-})
-test('diameter is 5', () => {
-    expect(circle2array(5)).toStrictEqual(
-        [
-            [ false, false, true, false, false ],
-            [ false, true, true, true, false ],
-            [ true, true, true, true, true ],
-            [ false, true, true, true, false ],
-            [ false, false, true, false, false ]
         ]
     )
 })
