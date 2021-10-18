@@ -41,9 +41,10 @@ export const circleOutline2array = (length: number, outlineWdith: number): binar
     const result = [...Array(length)].map(item => Array(length).fill(0))
     for (let h = 0; h < length; h++) {
         for (let w = 0; w < length; w++) {
+            const lengthSquare = (h - outerRadius) ** 2 + (w - outerRadius) ** 2
             if (
-                (h - outerRadius) ** 2 + (w - outerRadius) ** 2 <= outerRadius ** 2 &&
-                (h - outerRadius) ** 2 + (w - outerRadius) ** 2 > innerRadius ** 2
+                lengthSquare <= outerRadius ** 2 &&
+                lengthSquare > innerRadius ** 2
                 ) {
                 result[h][w] = 1
             }
