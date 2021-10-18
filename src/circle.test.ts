@@ -18,9 +18,9 @@ test('diameter is 2', () => {
 test('diameter is 3', () => {
     const asis = circle2array(3)
     const tobe = [
-        [ false, true, false ],
-        [ true, true, true ],
-        [ false, true, false ]
+        [ 0, 1, 0 ],
+        [ 1, 1, 1 ],
+        [ 0, 1, 0 ]
     ]
     expect(asis).toStrictEqual(tobe)
 })
@@ -28,10 +28,10 @@ test('diameter is 3', () => {
 test('diameter is 4', () => {
     expect(circle2array(4)).toStrictEqual(
         [
-            [ false, false, false, false ],
-            [ false, true, true, false ],
-            [ false, true, true, false ],
-            [ false, false, false, false ]
+            [ 0, 0, 0, 0 ],
+            [ 0, 1, 1, 0 ],
+            [ 0, 1, 1, 0 ],
+            [ 0, 0, 0, 0 ]
         ]
     )
 })
