@@ -1,9 +1,9 @@
-import { circle2array } from './circle'
+import { circle2array, circleOutline2array } from './circle'
 
 test('diameter is 0', () => {
     expect(() => {
         circle2array(0)
-    }).toThrowError('Circle diameter should be more than 1')
+    }).toThrowError('Circle length should be more than 1')
 })
 test('diameter is 1', () => {
     const asis = circle2array(1)
@@ -39,4 +39,14 @@ test('diameter is 4', () => {
             [ 0, 0, 0, 0 ]
         ]
     )
+})
+
+test('diameter is 3', () => {
+    const asis = circleOutline2array(3, 1)
+    const tobe = [
+        [ 0, 1, 0 ],
+        [ 1, 0, 1 ],
+        [ 0, 1, 0 ]
+    ]
+    expect(asis).toStrictEqual(tobe)
 })
