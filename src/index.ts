@@ -1,3 +1,3 @@
-import { circle } from './circle'
+import { circle, circleOutline } from './circle'
 
-export { circle }
+export { circle, circleOutline }
