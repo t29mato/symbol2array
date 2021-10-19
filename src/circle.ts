@@ -1,10 +1,14 @@
 // TODO: resultでは名前がいけてない
-interface result {
+interface data {
   count: number
   data: number[][]
 }
 
-export const circle = (size: number): result => {
+export const circle = (size: number, inlinesize?: number): data => {
+  // REFACTOR: Which design pattern?
+  if (inlinesize) {
+    return circleInline(size, inlinesize)
+  }
   if (size < 1) {
     throw new Error('Circle size should be more than 1')
   }
@@ -41,7 +45,7 @@ export const circle = (size: number): result => {
   }
 }
 
-export const circleInline = (size: number, inlineSize: number): result => {
+const circleInline = (size: number, inlineSize: number): data => {
   if (size < 1 || inlineSize < 1) {
     throw new Error('Circle size or inline width should be more than 1')
   }
