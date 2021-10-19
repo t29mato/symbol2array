@@ -29,7 +29,7 @@ export const circle = (size: number): result => {
   let count = 0
   for (let h = 0; h < size; h++) {
     for (let w = 0; w < size; w++) {
-      if ((h - radius) ** 2 + (w - radius) ** 2 <= radius ** 2.1) {
+      if ((h - radius) ** 2 + (w - radius) ** 2 <= radius ** 2) {
         count++
         data[h][w] = 1
       }
@@ -62,8 +62,8 @@ export const circleInline = (size: number, inlineSize: number): result => {
     for (let w = 0; w < size; w++) {
       const lengthSquare = (h - outerRadius) ** 2 + (w - outerRadius) ** 2
       if (
-        lengthSquare <= outerRadius ** 2.1 &&
-        lengthSquare > innerRadius ** 2.1
+        lengthSquare <= outerRadius ** 2 &&
+        lengthSquare >= innerRadius ** 2
       ) {
         count++
         data[h][w] = 1
