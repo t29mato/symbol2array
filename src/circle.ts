@@ -11,6 +11,8 @@ abstract class Symbol {
   protected createEmptyArray(size: number): number[][] {
     return [...Array(size)].map(() => Array(size).fill(0))
   }
+
+  abstract toArray(): { count: number; data: number[][] }
 }
 
 export class Circle extends Symbol {
