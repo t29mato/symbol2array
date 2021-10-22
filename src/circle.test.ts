@@ -1,16 +1,16 @@
-import { CircleFactory } from './circle'
+import { CircleCreator } from './circle'
 
-const circleFactory = new CircleFactory()
+const circleCreator = new CircleCreator()
 
 test('circle size: 0, inline size: 0', () => {
   expect(() => {
-    circleFactory.createSymbol(0, 0).toArray()
+    circleCreator.createSymbol(0, 0).toArray()
   }).toThrowError('array size should be more than 1.')
 })
 
 test('Circle size: 1, inline size: 0', () => {
   expect(() => {
-    circleFactory.createSymbol(1, 0).toArray()
+    circleCreator.createSymbol(1, 0).toArray()
   }).toThrowError('Inline size should be more than 1.')
 })
 
@@ -19,11 +19,11 @@ test('Circle size: 1, inline size: 1', () => {
     count: 1,
     data: [[1]],
   }
-  expect(circleFactory.createSymbol(1, 1).toArray()).toStrictEqual(tobe)
+  expect(circleCreator.createSymbol(1, 1).toArray()).toStrictEqual(tobe)
 })
 
 test('Circle size: 3, inline size: 1', () => {
-  const asis = circleFactory.createSymbol(3, 1).toArray()
+  const asis = circleCreator.createSymbol(3, 1).toArray()
   const tobe = {
     count: 5,
     data: [
@@ -36,7 +36,7 @@ test('Circle size: 3, inline size: 1', () => {
 })
 
 test('Circle size: 4, inline size: 1', () => {
-  const asis = circleFactory.createSymbol(4, 1).toArray()
+  const asis = circleCreator.createSymbol(4, 1).toArray()
   const tobe = {
     count: 4,
     data: [
@@ -50,7 +50,7 @@ test('Circle size: 4, inline size: 1', () => {
 })
 
 test('Circle size: 5, inline size: 1', () => {
-  const asis = circleFactory.createSymbol(5, 1).toArray()
+  const asis = circleCreator.createSymbol(5, 1).toArray()
   const tobe = {
     count: 12,
     data: [
@@ -65,7 +65,7 @@ test('Circle size: 5, inline size: 1', () => {
 })
 
 test('Circle size: 5, inline size: 2', () => {
-  const asis = circleFactory.createSymbol(5, 2).toArray()
+  const asis = circleCreator.createSymbol(5, 2).toArray()
   const tobe = {
     count: 13,
     data: [
@@ -80,7 +80,7 @@ test('Circle size: 5, inline size: 2', () => {
 })
 
 test('Circle size: 5, inline size: 3', () => {
-  const asis = circleFactory.createSymbol(5, 3).toArray()
+  const asis = circleCreator.createSymbol(5, 3).toArray()
   const tobe = {
     count: 13,
     data: [
@@ -95,7 +95,7 @@ test('Circle size: 5, inline size: 3', () => {
 })
 
 test('Circle size: 5, inline size: 4', () => {
-  const asis = circleFactory.createSymbol(5, 4).toArray()
+  const asis = circleCreator.createSymbol(5, 4).toArray()
   const tobe = {
     count: 13,
     data: [
@@ -110,7 +110,7 @@ test('Circle size: 5, inline size: 4', () => {
 })
 
 test('Circle size: 10, inline size: 1', () => {
-  const asis = circleFactory.createSymbol(10, 1).toArray()
+  const asis = circleCreator.createSymbol(10, 1).toArray()
   const tobe = {
     count: 28,
     data: [
@@ -130,7 +130,7 @@ test('Circle size: 10, inline size: 1', () => {
 })
 
 test('Circle size: 11, inline size: 2', () => {
-  const asis = circleFactory.createSymbol(11, 2).toArray()
+  const asis = circleCreator.createSymbol(11, 2).toArray()
   const tobe = {
     count: 56,
     data: [

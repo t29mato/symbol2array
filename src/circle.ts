@@ -15,11 +15,11 @@ export abstract class SymbolClass {
   abstract toArray(): { count: number; data: number[][] }
 }
 
-export abstract class SymbolFactory {
+export abstract class SymbolCreator {
   abstract createSymbol(arraySize: number, inlineSize: number): SymbolClass
 }
 
-export class CircleFactory extends SymbolFactory {
+export class CircleCreator extends SymbolCreator {
   createSymbol(arraySize: number, inlineSize: number): SymbolClass {
     if (arraySize < 1) {
       throw new Error('array size should be more than 1.')
