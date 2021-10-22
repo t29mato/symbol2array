@@ -1,3 +1,3 @@
-import { Circle, CircleInline } from './circle'
+import * as Circle from './circle'
 
-export { Circle, CircleInline }
+export { Circle }
