@@ -9,9 +9,11 @@ test('circle size: 0, inline size: 0', () => {
 })
 
 test('Circle size: 1, inline size: 0', () => {
-  expect(() => {
-    circleCreator.createSymbol(1, 0).toArray()
-  }).toThrowError('Inline size should be more than 1.')
+  const tobe = {
+    count: 1,
+    data: [[1]],
+  }
+  expect(circleCreator.createSymbol(1, 0).toArray()).toStrictEqual(tobe)
 })
 
 test('Circle size: 1, inline size: 1', () => {
@@ -142,6 +144,27 @@ test('Circle size: 11, inline size: 2', () => {
       [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
       [0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0],
       [0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    ],
+  }
+  expect(asis).toStrictEqual(tobe)
+})
+
+test('Circle size: 11, inline size: 0', () => {
+  const asis = circleCreator.createSymbol(11, 0).toArray()
+  const tobe = {
+    count: 81,
+    data: [
+      [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+      [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
       [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
       [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],

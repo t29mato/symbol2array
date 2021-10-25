@@ -24,8 +24,8 @@ export class CircleCreator extends SymbolCreator {
     if (arraySize < 1) {
       throw new Error('array size should be more than 1.')
     }
-    if (inlineSize < 1) {
-      throw new Error('Inline size should be more than 1.')
+    if (inlineSize < 0) {
+      throw new Error('Inline size should be more than 0.')
     }
     return new Circle(arraySize, inlineSize)
   }
@@ -39,7 +39,9 @@ export class Circle extends SymbolClass {
   toArray(): { count: number; data: number[][] } {
     const diameter = this.arraySize - 1
     const radius = diameter / 2
-    const innerRadius = Math.max(radius - this.inlineSize, 0)
+    // INFO: inline size is 0 means inner radius size must be 0
+    const innerRadius =
+      this.inlineSize === 0 ? 0 : Math.max(radius - this.inlineSize, 0)
 
     const data = this.createEmptyArray(this.arraySize)
     let count = 0
