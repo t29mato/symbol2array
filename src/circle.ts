@@ -1,23 +1,4 @@
-// INFO: Symbol is defined by ES2015 as constructor, so it's named with *class
-export abstract class SymbolClass {
-  readonly arraySize: number
-  readonly inlineSize: number
-
-  constructor(arraySize: number, inlineSize: number) {
-    this.arraySize = arraySize
-    this.inlineSize = inlineSize
-  }
-
-  protected createEmptyArray(size: number): number[][] {
-    return [...Array(size)].map(() => Array(size).fill(0))
-  }
-
-  abstract toArray(): { count: number; data: number[][] }
-}
-
-export abstract class SymbolCreator {
-  abstract createSymbol(arraySize: number, inlineSize: number): SymbolClass
-}
+import { SymbolClass, SymbolCreator } from './symbol'
 
 export class CircleCreator extends SymbolCreator {
   createSymbol(arraySize: number, inlineSize: number): SymbolClass {
@@ -43,7 +24,7 @@ export class Circle extends SymbolClass {
     const innerRadius =
       this.inlineSize === 0 ? 0 : Math.max(radius - this.inlineSize, 0)
 
-    const data = this.createEmptyArray(this.arraySize)
+    const data = this.create2DArray(this.arraySize, 0)
     let count = 0
     for (let h = 0; h < this.arraySize; h++) {
       for (let w = 0; w < this.arraySize; w++) {
