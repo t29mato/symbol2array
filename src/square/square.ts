@@ -1,5 +1,4 @@
-import { SymbolClass, SymbolCreator } from './symbol'
-
+import { SymbolClass, SymbolCreator } from 'symbol'
 export class SquareCreator extends SymbolCreator {
   createSymbol(arraySize: number, inlineSize: number): SymbolClass {
     if (arraySize < 1) {
