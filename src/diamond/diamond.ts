@@ -12,7 +12,7 @@ export class DiamondCreator extends SymbolCreator {
   }
 }
 
-export class Diamond extends SymbolClass {
+class Diamond extends SymbolClass {
   constructor(arraySize: number, inlineSize: number) {
     super(arraySize, inlineSize)
   }

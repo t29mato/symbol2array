@@ -1,6 +1,4 @@
-import { CircleCreator } from './circle'
-import { SquareCreator } from './square'
-import { DiamondCreator } from './diamond'
-import { TriangleCreator } from './triangle'
-
-export { CircleCreator, SquareCreator, DiamondCreator, TriangleCreator }
+export * from './circle'
+export * from './square'
+export * from './diamond'
+export * from './triangle'

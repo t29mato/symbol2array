@@ -12,7 +12,7 @@ export class CircleCreator extends SymbolCreator {
   }
 }
 
-export class Circle extends SymbolClass {
+class Circle extends SymbolClass {
   constructor(arraySize: number, inlineSize: number) {
     super(arraySize, inlineSize)
   }

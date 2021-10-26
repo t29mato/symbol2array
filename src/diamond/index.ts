@@ -1,3 +1,1 @@
-import { DiamondCreator } from './diamond'
-
-export { DiamondCreator }
+export * from './diamond'

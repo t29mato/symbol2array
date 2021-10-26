@@ -11,7 +11,7 @@ export class SquareCreator extends SymbolCreator {
   }
 }
 
-export class Square extends SymbolClass {
+class Square extends SymbolClass {
   constructor(arraySize: number, inlineSize: number) {
     super(arraySize, inlineSize)
   }

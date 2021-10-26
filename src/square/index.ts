@@ -1,3 +1,1 @@
-import { SquareCreator } from './square'
-
-export { SquareCreator }
+export * from './square'

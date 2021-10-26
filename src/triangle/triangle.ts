@@ -11,7 +11,7 @@ export class TriangleCreator extends SymbolCreator {
   }
 }
 
-export class Triangle extends SymbolClass {
+class Triangle extends SymbolClass {
   constructor(arraySize: number, inlineSize: number) {
     super(arraySize, inlineSize)
   }

@@ -1,3 +1,1 @@
-import { TriangleCreator } from './triangle'
-
-export { TriangleCreator }
+export * from './triangle'
