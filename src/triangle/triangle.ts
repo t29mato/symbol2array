@@ -1,4 +1,4 @@
-import { SymbolClass  } from '../symbol'
+import { SymbolClass } from '../symbol'
 
 export class Triangle extends SymbolClass {
   constructor(arraySize: number, inlineSize: number) {
@@ -21,6 +21,7 @@ export class Triangle extends SymbolClass {
         const x = 0 - halfSideLength + w
         const y = 0 + triangleHeight - h
         const root3 = Math.sqrt(3)
+        const root2 = Math.sqrt(2)
         // INFO: 底辺より下は対象外
         if (y < 0) {
           continue
@@ -29,7 +30,10 @@ export class Triangle extends SymbolClass {
           if (root3 * (halfSideLength - Math.abs(x)) < y) {
             continue
           }
-          if (root3 * (halfSideLength - Math.abs(x)) - this.inlineSize >= y) {
+          if (
+            root3 * (halfSideLength - Math.abs(x)) - this.inlineSize * root2 >=
+            y
+          ) {
             if (y > this.inlineSize) {
               continue
             }
