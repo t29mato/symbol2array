@@ -5,19 +5,11 @@ symbol2array generates a two-dimensional array from circle, square, diamond and 
 ## examples
 
 ```js
-import {
-  CircleCreator,
-  SquareCreator,
-  DiamondCreator,
-  TriangleCreator,
-} from 'symbol2array'
+import { SymbolCreator } from 'symbol2array'
 
-const circleCreator = new CircleCreator()
-const squareCreator = new SquareCreator()
-const diamondCreator = new DiamondCreator()
-const triangleCreator = new TriangleCreator()
+const symbolCreator = new SymbolCreator()
 
-circleCreator.createSymbol(10, 1).toArray()
+symbolCreator.createSymbol('circle', 10, 1).toArray()
 // [
 //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 //     [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
@@ -31,7 +23,7 @@ circleCreator.createSymbol(10, 1).toArray()
 //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 // ]
 
-squareCreator.createSymbol(10, 1).toArray()
+symbolCreator.createSymbol('square', 10, 1).toArray()
 // [
 //     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 //     [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -45,7 +37,7 @@ squareCreator.createSymbol(10, 1).toArray()
 //     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 // ]
 
-diamondCreator.createSymbol(11, 1).toArray()
+symbolCreator.createSymbol('diamond', 11, 1).toArray()
 // [
 //     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
 //     [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
@@ -60,7 +52,7 @@ diamondCreator.createSymbol(11, 1).toArray()
 //     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
 // ]
 
-triangleCreator.createSymbol(13, 1).toArray()
+symbolCreator.createSymbol('triangle', 13, 1).toArray()
 // [
 //     [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
 //     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
