@@ -14,7 +14,7 @@ export class Diamond extends SymbolClass {
     const isInline = this.inlineSize > 0
     for (let h = 0; h < this.arraySize; h++) {
       for (let w = 0; w < this.arraySize; w++) {
-        // INFO: 中心は(halfD, halfD)
+        // INFO: 原点(halfD, halfD)
         const x = 0 - halfD + w
         const y = 0 + halfD - h
         if (isInline && innerHalfD > 0) {
