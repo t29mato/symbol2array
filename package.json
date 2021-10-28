@@ -1,11 +1,11 @@
 {
   "name": "symbol2array",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && tsc",
+    "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepublish": "rm -rf dist && yarn build"
