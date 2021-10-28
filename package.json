@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "lint": "eslint"
   },
   "author": "MATO Tomoya <tomoya.matou@gmail.com> (https://github.com/t29mato)",
   "repository": {
