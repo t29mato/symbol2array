@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/t29mato/symbol2array/actions/workflows/node.js.yml/badge.svg)](https://github.com/t29mato/symbol2array/actions/workflows/node.js.yml)
+
 # symbol2array
 
 symbol2array generates a two-dimensional array from circle, square, diamond and triangle
