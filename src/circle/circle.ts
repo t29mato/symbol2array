@@ -1,18 +1,6 @@
-import { SymbolClass, SymbolCreator } from '../symbol'
+import { SymbolClass } from '../symbol'
 
-export class CircleCreator extends SymbolCreator {
-  createSymbol(arraySize: number, inlineSize: number): SymbolClass {
-    if (arraySize < 1) {
-      throw new Error('array size should be more than 1.')
-    }
-    if (inlineSize < 0) {
-      throw new Error('Inline size should be more than 0.')
-    }
-    return new Circle(arraySize, inlineSize)
-  }
-}
-
-class Circle extends SymbolClass {
+export class Circle extends SymbolClass {
   constructor(arraySize: number, inlineSize: number) {
     super(arraySize, inlineSize)
   }

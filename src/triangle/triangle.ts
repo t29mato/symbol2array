@@ -1,17 +1,6 @@
-import { SymbolClass, SymbolCreator } from '../symbol'
-export class TriangleCreator extends SymbolCreator {
-  createSymbol(arraySize: number, inlineSize: number): SymbolClass {
-    if (arraySize < 1) {
-      throw new Error('array size should be more than 1.')
-    }
-    if (inlineSize < 0) {
-      throw new Error('inline size should be more than 0.')
-    }
-    return new Triangle(arraySize, inlineSize)
-  }
-}
+import { SymbolClass  } from '../symbol'
 
-class Triangle extends SymbolClass {
+export class Triangle extends SymbolClass {
   constructor(arraySize: number, inlineSize: number) {
     super(arraySize, inlineSize)
   }

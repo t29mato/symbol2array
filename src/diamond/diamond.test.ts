@@ -1,25 +1,11 @@
-import { DiamondCreator } from './diamond'
-
-const diamondCreator = new DiamondCreator()
-
-test('diamond size: 10, inline size: -10', () => {
-  expect(() => {
-    diamondCreator.createSymbol(10, -10).toArray()
-  }).toThrowError('inline size should be more than 0.')
-})
-
-test('diamond size: 0, inline size: 0', () => {
-  expect(() => {
-    diamondCreator.createSymbol(0, 0).toArray()
-  }).toThrowError('array size should be more than 1.')
-})
+import { Diamond } from './diamond'
 
 test('Diamond size: 1, inline size: 0', () => {
   const tobe = {
     count: 1,
     data: [[1]],
   }
-  expect(diamondCreator.createSymbol(1, 0).toArray()).toStrictEqual(tobe)
+  expect(new Diamond(1, 0).toArray()).toStrictEqual(tobe)
 })
 
 test('Diamond size: 1, inline size: 1', () => {
@@ -27,11 +13,11 @@ test('Diamond size: 1, inline size: 1', () => {
     count: 1,
     data: [[1]],
   }
-  expect(diamondCreator.createSymbol(1, 1).toArray()).toStrictEqual(tobe)
+  expect(new Diamond(1, 1).toArray()).toStrictEqual(tobe)
 })
 
 test('Diamond size: 3, inline size: 0', () => {
-  const asis = diamondCreator.createSymbol(3, 0).toArray()
+  const asis = new Diamond(3, 0).toArray()
   const tobe = {
     count: 5,
     data: [
@@ -44,7 +30,7 @@ test('Diamond size: 3, inline size: 0', () => {
 })
 
 test('Diamond size: 3, inline size: 1', () => {
-  const asis = diamondCreator.createSymbol(3, 1).toArray()
+  const asis = new Diamond(3, 1).toArray()
   const tobe = {
     count: 5,
     data: [
@@ -57,7 +43,7 @@ test('Diamond size: 3, inline size: 1', () => {
 })
 
 test('Diamond size: 11, inline size: 1', () => {
-  const asis = diamondCreator.createSymbol(11, 1).toArray()
+  const asis = new Diamond(11, 1).toArray()
   const tobe = {
     count: 20,
     data: [
@@ -78,7 +64,7 @@ test('Diamond size: 11, inline size: 1', () => {
 })
 
 test('Diamond size: 11, inline size: 3', () => {
-  const asis = diamondCreator.createSymbol(11, 3).toArray()
+  const asis = new Diamond(11, 3).toArray()
   const tobe = {
     count: 48,
     data: [
@@ -99,7 +85,7 @@ test('Diamond size: 11, inline size: 3', () => {
 })
 
 test('Diamond size: 11, inline size: 5', () => {
-  const asis = diamondCreator.createSymbol(11, 5).toArray()
+  const asis = new Diamond(11, 5).toArray()
   const tobe = {
     count: 61,
     data: [
@@ -120,7 +106,7 @@ test('Diamond size: 11, inline size: 5', () => {
 })
 
 test('Diamond size: 11, inline size: 20', () => {
-  const asis = diamondCreator.createSymbol(11, 20).toArray()
+  const asis = new Diamond(11, 20).toArray()
   const tobe = {
     count: 61,
     data: [

@@ -15,6 +15,3 @@ export abstract class SymbolClass {
   abstract toArray(): { count: number; data: number[][] }
 }
 
-export abstract class SymbolCreator {
-  abstract createSymbol(arraySize: number, inlineSize: number): SymbolClass
-}
