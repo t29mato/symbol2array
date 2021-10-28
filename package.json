@@ -1,6 +1,6 @@
 {
   "name": "symbol2array",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepublish": "rm -rf dist && yarn build"
+    "prepublish": "yarn test && rm -rf dist && yarn build"
   },
   "author": "MATO Tomoya <tomoya.matou@gmail.com> (https://github.com/t29mato)",
   "repository": {
