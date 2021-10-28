@@ -10,8 +10,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "prepublish": "yarn test && rm -rf dist && yarn build"
+    "test:watch": "jest --watch"
   },
   "author": "MATO Tomoya <tomoya.matou@gmail.com> (https://github.com/t29mato)",
   "repository": {
