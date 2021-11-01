@@ -20,15 +20,19 @@ export class Triangle extends SymbolClass {
         // INFO: 原点は外側の三角形の下辺の中心
         const x = col - halfSide
         const y = height - row
+        // INFO: 正三角形の斜辺の傾きは-2
+        const a = -2
+        const b = height
+        const b_inner = height - 2 * border
         // INFO: 底辺より下は対象外
         if (y < 0) {
           continue
         }
         if (isInline) {
-          if (y > -2 * Math.abs(x) + height) {
+          if (y > a * Math.abs(x) + b) {
             continue
           }
-          if (y < -2 * Math.abs(x) + height - 2 * border) {
+          if (y < a * Math.abs(x) + b_inner) {
             if (y > border) {
               continue
             }
@@ -37,7 +41,7 @@ export class Triangle extends SymbolClass {
           data[row][col] = 1
         } else {
           // INFO: 左右上辺は対象外
-          if (y > -2 * Math.abs(x) + height) {
+          if (y > a * Math.abs(x) + b) {
             continue
           }
           count++
