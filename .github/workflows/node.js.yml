@@ -25,7 +25,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
-      - run: yarn
-      - run: yarn lint
-      - run: yarn build
-      - run: yarn test
+      - name: Install Dependencies
+        run: yarn
+      - name: Execute Eslint
+        run: yarn lint
+      - name: Build
+        run: yarn build
+      - name: Test
+        run: yarn jest --coverage
+      - name: Uploads Coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unittests
