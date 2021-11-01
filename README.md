@@ -1,4 +1,5 @@
 [![Node.js CI](https://github.com/t29mato/symbol2array/actions/workflows/node.js.yml/badge.svg)](https://github.com/t29mato/symbol2array/actions/workflows/node.js.yml)
+[![codecov](https://codecov.io/gh/t29mato/symbol2array/branch/main/graph/badge.svg?token=75PIA2NJGL)](https://codecov.io/gh/t29mato/symbol2array)
 
 # symbol2array
 
